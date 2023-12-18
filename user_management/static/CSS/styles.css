@@ -1,0 +1,32 @@
+/* Custom Styles */
+
+
+.login-card {
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 20px;
+  text-align: center;  
+}
+
+.login-card h3 {
+  color: var(--midnight-blue); 
+  margin-bottom: 20px;
+}
+
+.login-card .btn {
+  width: 100%;
+  margin-top: 10px;
+  background: var(--midnight-blue);
+  color: var(--ghost-white);
+}
+
+.login-card .btn:hover {
+  background: var(--penn-blue);
+  box-shadow: 0 4px 8px var(--silver-lake-blue);
+}
+
+.login-card p {
+  margin-top: 8px; 
+  font-size: 0.9em; 
+  color: var(--eerie-black);
+}

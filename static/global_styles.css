@@ -1,0 +1,59 @@
+:root {
+    --midnight-blue: #191970ff; /* main branding */
+    --platinum: #e5e4e2ff; /* contrast to penn blue and midnight blue */
+    --ghost-white: #f8f8ffff; /* optimal background contrast to eerie black */
+    --eerie-black: #1b1c1eff; /* optimal shade of black for text with ghost white contrasting */
+    --penn-blue: #011f5bff; /* another shade of blue for main branding */
+    --seasalt: #f7f7f7ff; /* another contrast to the blues */
+    --silver-lake-blue: #5d89baff; /* subtle feedback / responsiveness blue */
+    --falu-red: #800013ff; /* error red */
+}
+
+body {
+    background: var(--ghost-white);
+    color: var(--eerie-black);
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1, h2, h3 {
+    color: var(--midnight-blue);  
+}
+
+a {
+    color: var(--penn-blue);
+}
+
+.btn, .nav-wrapper, .page-footer {
+    background: var(--midnight-blue) !important;
+    color: var(--ghost-white);
+}
+
+.btn:hover, .nav-wrapper:hover, .page-footer:hover {
+    background: var(--penn-blue) !important;
+    box-shadow: 0 4px 8px var(--silver-lake-blue);
+}
+
+/* Accessibility Improvements */
+a:focus, button:focus {
+    outline: 2px solid var(--silver-lake-blue);
+    outline-offset: 2px;
+}
+
+/* Typography Enhancements */
+h1, h2, h3, p {
+    line-height: 1.6;
+}
+
+.midnight-blue {
+    background-color: var(--midnight-blue) !important;
+}
+
+/* Footer Styles */
+footer.page-footer {
+    background: var(--midnight-blue) !important;
+    color: var(--ghost-white);
+    margin-top: auto; /* pushes the footer to the bottom */
+}

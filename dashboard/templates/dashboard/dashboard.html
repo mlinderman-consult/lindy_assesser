@@ -1,0 +1,35 @@
+
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block stylesheet %}
+  <link href="{% static 'dashboard/static/CSS/dashyStylin.css' %}" rel="stylesheet"/>
+{% endblock %}
+
+{% block content %}
+
+<div class="container white-space-enhanced"><div class="row row-spacing-enhanced" style="margin-top: 85px;"><div class="col s4"><div class="card"><div class="card-content"><span class="card-title">Assessment Selection</span><a class="waves-effect waves-light btn" href="/dashboard/assessment_selection/">Go to Assessment Selection</a></div></div></div><div class="col s4"><div class="card"><div class="card-content"><span class="card-title">Assessment Distribution</span><a class="waves-effect waves-light btn" href="/dashboard/assessment_distribution/">Go to Assessment Distribution</a></div></div></div><div class="col s4"><div class="card"><div class="card-content"><span class="card-title">Assessment Analysis</span><a class="waves-effect waves-light btn" href="/dashboard/assessment_analysis/">Go to Assessment Analysis</a></div></div></div></div>
+<!-- Improved Dashboard -->
+<div class="row row-spacing-enhanced">
+<div class="col s12">
+<!-- Dynamic generation of dashboard cards (Example) -->
+      {% for item in dashboard_items %}
+      <div class="card horizontal dashboard-card">
+<div class="card-stacked">
+<div class="card-content midnight-blue lighten-4">
+<h4 class="midnight-blue text-darken-4">{{ item.title }}</h4>
+<p>{{ item.description }}</p>
+</div>
+</div>
+</div>
+      {% endfor %}
+    </div>
+</div>
+</div>
+
+{% endblock %}
+
+{% block javascript %}
+  <script src="{% static 'dashboard/static/JS/updated_dashboard_scripts.js' %}"></script>
+{% endblock %}
